@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>profile card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Profile Card</title>
+    <script src="https://kit.fontawesome.com/c136bb7c9f.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <article data-testid="test-profile-card">
+      <div class="header-container">
+        <figure>
+          <img src="./images/face8.jpg" alt="Chinedu's profile photo" data-testid="profile-avatar" />
+        </figure>
+
+        <header>
+          <h2 aria-label="Profile name" data-testid="profile-name">
+            Chinedu Ezenwafor
+          </h2>
+          <div class="title" data-testid="profile-title">
+            Frontend Developer
+          </div>
+        </header>
+      </div>
+
+
+      <p data-testid="profile-bio">
+        Passionate about crafting beautiful, accessible web experiences.
+        Loves React, CSS, and clean code.
+      </p>
+
+      <nav aria-label="Social links">
+        <ul>
+          <li>
+            <a href="https://x.com/kingsleysancho" tabindex="0" target="_blank" rel="noopener noreferrer"
+              data-testid="social-link-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/Kingsley6624" tabindex="0" target="_blank" rel="noopener noreferrer"
+              data-testid="social-link-github">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/chinedu-ezenwafor-3b5621243/" tabindex="0" target="_blank"
+              rel="noopener noreferrer" data-testid="social-link-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="personality">
+        <section>
+          <h3>Hobbies</h3>
+          <ul>
+            <li data-testid="hobby-1">Watching movie</li>
+            <li data-testid="hobby-2">Eating good food</li>
+            <li data-testid="hobby-3">Coding</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Dislikes</h3>
+          <ul>
+            <li data-testid="dislike-1">Being ideal</li>
+            <li data-testid="dislike-2">Being Broke</li>
+            <li data-testid="dislike-3">Debugging</li>
+          </ul>
+        </section>
+      </div>
+      <time id="current-time" class="current-time" data-testid="test-user-time" datetime=""></time>
+    </article>
+    <script src="index.js"></script>
+  </body>
+
+  </html>

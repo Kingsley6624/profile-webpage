@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "poppins", serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+
+}
+
+article {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: 3s;
+  width: 480px;
+  padding: 24px;
+  margin-block: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-align: start;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  margin: 16px 0 4px;
+}
+
+.title {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0077cc;
+  font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a :hover,
+nav a :focus {
+  transform: scale(1.2);
+  color: #005fa3;
+  outline: none;
+}
+
+.personality {
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  margin-top: 16px;
+}
+
+section h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+.current-time {
+  align-self: center;
+  color: #0077cc;
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: small;
+}
+
+@media screen and (max-width: 480px) {
+
+
+  article {
+    width: 90%;
+    padding: 16px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  header h2 {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+
+
+  nav a {
+    font-size: 1.5rem;
+  }
+
+  .personality {
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+  }
+
+  section h3 {
+    font-size: 0.95rem;
+  }
+
+  section ul {
+    list-style: none;
+  }
+}
