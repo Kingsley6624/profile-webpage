@@ -24,7 +24,7 @@ article {
   transition: 3s;
   width: 480px;
   padding: 24px;
-  margin-block: 24px;
+  margin: 24px;
   display: flex;
   flex-direction: column;
 }
@@ -67,7 +67,7 @@ p {
   text-align: center;
 }
 
-nav ul {
+.Social-list {
   list-style: none;
   padding: 0;
   display: flex;
@@ -76,15 +76,15 @@ nav ul {
   margin: 16px 0;
 }
 
-nav a {
+.Social-list a {
   text-decoration: none;
   color: #0077cc;
   font-size: 2rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-nav a :hover,
-nav a :focus {
+.Social-list a :hover,
+.Social-list a :focus {
   transform: scale(1.2);
   color: #005fa3;
   outline: none;
@@ -150,7 +150,7 @@ li {
 
 
 
-  nav a {
+  .Social-list a {
     font-size: 1.5rem;
   }
 
