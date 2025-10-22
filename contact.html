@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+  <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="./about.html">About Me</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  <form id="contact-form">
+    <h2>Contact Us</h2>
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" data-testid="test-contact-name" required />
+    <div class="error-message" data-testid="test-contact-error-name"></div>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email"  data-testid="test-contact-email" required />
+    <div class="error-message" data-testid="test-contact-error-email"></div>
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject"  data-testid="test-contact-subject" required />
+    <div class="error-message" data-testid="test-contact-error-subject"></div>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" data-testid="test-contact-message" required></textarea>
+    <div class="error-message" data-testid="test-contact-error-message"></div>
+
+    <button type="submit" data-testid="test-contact-submit">Submit</button>
+    <div class="success-message" data-testid="test-contact-success" style="display: none;">
+      Thank you! Your message has been sent.
+    </div>
+  </form>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const successMessage = document.querySelector('[data-testid="test-contact-success"]');
+    // 
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let valid = true;
+
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const subject = document.getElementById('subject');
+      const message = document.getElementById('message');
+
+      const errors = {
+        name: document.querySelector('[data-testid="test-contact-error-name"]'),
+        email: document.querySelector('[data-testid="test-contact-error-email"]'),
+        subject: document.querySelector('[data-testid="test-contact-error-subject"]'),
+        message: document.querySelector('[data-testid="test-contact-error-message"]')
+      };
+
+      
+
+      Object.values(errors).forEach((error)=> error.textContent = "");
+
+      if(!name.value.trim()) {
+        errors.name.textContent = "Full name is required";
+        valid = false;
+      }
+       if (!email.value.trim()) {
+        errors.email.textContent = 'Email is required';
+        valid = false;
+      } else if (!/^\S+@\S+\.\S+$/.test(email.value)) {
+        errors.email.textContent = 'Email must be valid (name@example.com)';
+        valid = false;
+      }
+      if(!subject.value.trim()) {
+        errors.subject.textContent = "subject is required";
+        valid = false;
+      }
+      if (!message.value.trim()) {
+        errors.message.textContent = "message is required";
+        valid = false;
+      }else if (message.value.trim().length < 10) {
+        errors.message.textContent = "mesaage must be at least 10 characters";
+        valid = false;
+      }
+
+      if (valid) {
+        successMessage.style.display = 'block';
+        form.reset();
+
+        setTimeout(()=>{
+        successMessage.style.display = "none"
+      }, 3000)
+      }
+    });
+  </script>
+
+</body>
+
+</html>
